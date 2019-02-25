@@ -15,7 +15,8 @@ def public_sign_page(request):
 				mother_name = request.POST.get("mother_name")
 				email = request.POST.get("email")
 				phone_number = request.POST.get("phone_number")
-				PublicRegistration.objects.create(person_name 				=		name, 
+				PublicRegistration.objects.create(
+												person_name 				=		name, 
 												  person_father_name 		=		father_name, 
 												  person_mother_name 		=		mother_name, 
 												  person_email 				=		email, 
