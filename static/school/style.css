@@ -1,0 +1,14 @@
+body {
+	background-color: aqua;
+}
+
+.mainheading {
+	
+	font-family: 'Niconne', cursive;
+}
+
+.count {
+	text-align: center;
+	font-size: 50px;
+	margin-top: 0px;
+}
