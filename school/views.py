@@ -3,6 +3,8 @@ from django.shortcuts import render
 
 from .models import OwnerSchool
 
+from .forms import StudentForm
+
 def home(request):
 	school_banner = OwnerSchool.objects.all()
 	for x in school_banner:
@@ -13,12 +15,5 @@ def home(request):
 
 
 def signin_page(request):
-	school_banner = OwnerSchool.objects.all()
-	for x in school_banner:
-		pass
-	time_left = x.time_left
-	print(time_left is True)
-	if time_left is True:
-		return render(request, 'form/login.html')
-	else:
-		return render(request, 'form/sign.html')
+	form = StudentForm()
+	return render(request, 'form/sign-student.html', {'form':form})

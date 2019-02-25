@@ -6,16 +6,25 @@
 
 <div class="container"><br>
 	<div class="jumbotron">
-		<center><h3 class="mainheading">Hackthon for age group of all age for all school.</h3></center>
+		{%  for school in school_banner %}
+		<center><h3 class="mainheading">{{ school.title }}</h3></center>
 		<br>
 		<center><img src="{% static 'img/bg.jpg' %}" class="img-fluid" width="50%"></center><br>
 		<div class="row">
 			<div class="col">
-				{%  for school in school_banner %}
+				
 				{{ school.message|safe }}- {{ school.time_left }}<br>
 				<center><p id="demo" class="count"></p>
 				{% endfor %}
-				<p>Register Fast your self <a href="{% url 'signin' %}">click here</a></p>
+
+				{% if time_left %}
+				<p><span style="color: red;">Student</span> Register<a href="{% url 'student-sign' %}"> here</a></p>
+				<p><span style="color: red;">Non-Student</span> Register<a href="{% url 'public-sign' %}"> here</a></p>
+				{% else %}
+				<p><strong>Sorry Registrations closed</strong></p><br>
+				<p>You can request <a href="">here</a></p>
+				{% endif %}
+
 			</div>
 				<script>
 				// Set the date we're counting down to
