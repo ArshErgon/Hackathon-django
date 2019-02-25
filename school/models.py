@@ -14,8 +14,8 @@ class OwnerSchool(models.Model):
 class StudentRegistration(models.Model):
 	student_school 			=		 	models.CharField(max_length=100)
 	student_name 			=		 	models.CharField(max_length=100)
-	student_father_name 	=			models.CharField(max_length=100)
-	student_mother_name 	=		 	models.CharField(max_length=100)
+	student_father_name 		=			models.CharField(max_length=100)
+	student_mother_name 		=		 	models.CharField(max_length=100)
 	student_age 			=		 	models.IntegerField()
 	student_class 			=		 	models.IntegerField()
 
