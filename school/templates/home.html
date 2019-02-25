@@ -16,6 +16,7 @@
 				{{ school.message|safe }}- {{ school.time_left }}<br>
 				<center><p id="demo" class="count"></p>
 				{% endfor %}
+				<center><p>Number of registration: <span style="color:  red;">{{ total }}</span></p></center>
 
 				{% if time_left %}
 				<p><span style="color: red;">Student</span> Register<a href="{% url 'student-sign' %}"> here</a></p>

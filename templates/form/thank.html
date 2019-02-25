@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Thank You!</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static 'school/style.css' %}">
+</head>
+<body>
+<div class="container"><br>
+	<div class="jumbotron">
+		<img src="{% static 'thank.png' %}" class="img-fluid" style="position: relative;">
+		<center><a href="{% url 'home' %}"><button class="btn btn-danger" class="hello-button">Hello</button></a>	</center>
+	</div>
+
+	
+</div>
+</body>
+</html>
