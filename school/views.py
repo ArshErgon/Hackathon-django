@@ -27,12 +27,13 @@ def signin_page(request):
 		student_mother_name = request.POST.get("student_mother_name")
 		student_age = request.POST.get("student_age")
 		student_class = request.POST.get("student_class")
-		StudentRegistration.objects.create(student_school			=		school_name, 
-										   student_name 			=		student_name, 
-										   student_father_name 		=		student_father_name, 
-										   student_mother_name 		=		student_mother_name, 
-										   student_age 				=		student_age, 
-										   student_class 			=		student_class)
+		StudentRegistration.objects.create(
+						   student_school		=		school_name, 
+						   student_name			=		student_name, 
+						   student_father_name 		=		student_father_name, 
+						   student_mother_name 		=		student_mother_name, 
+						   student_age			=		student_age, 
+						   student_class		=		student_class)
 		return redirect("/thank/you/")
 	return render(request, 'form/sign-student.html', {'form':form})
 
