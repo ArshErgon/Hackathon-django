@@ -19,7 +19,8 @@ def public_sign_page(request):
 												  person_father_name 		=		father_name, 
 												  person_mother_name 		=		mother_name, 
 												  person_email 				=		email, 
-												  person_phone_number 		=		phone_number)
+												  person_phone_number 		=		phone_number
+												  )
 				return redirect("/thank/you/")
 
 	return render(request, 'form/sign-public.html',{'form':form})
