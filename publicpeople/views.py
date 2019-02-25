@@ -16,11 +16,11 @@ def public_sign_page(request):
 				email = request.POST.get("email")
 				phone_number = request.POST.get("phone_number")
 				PublicRegistration.objects.create(
-												person_name 				=		name, 
-												  person_father_name 		=		father_name, 
-												  person_mother_name 		=		mother_name, 
-												  person_email 				=		email, 
-												  person_phone_number 		=		phone_number
+								person_name			=		name, 
+							  	person_father_name 		=		father_name, 
+								person_mother_name 		=		mother_name, 
+								person_email			=		email, 
+								person_phone_number 		=		phone_number
 												  )
 				return redirect("/thank/you/")
 
